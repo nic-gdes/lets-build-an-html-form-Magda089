@@ -37,7 +37,7 @@ margin-bottom: 5px;
 display: block;
 }
 
-.submit-button {
+button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007b77;
@@ -47,7 +47,7 @@ display: block;
     border-radius: 10px;
 }
 
-.submit-button:hover {
+button:hover {
 background-color: #21a277;
 }
 
