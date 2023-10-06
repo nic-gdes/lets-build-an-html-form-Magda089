@@ -13,7 +13,7 @@
     </header>
 
     <main>
-      <for action="result.html1" method="GET" onsubmit="return displaySuccessMessage();">
+      <form action="result.html1" method="GET">
         <h2 class="form-heading">Create an Account</h2>
        <ul>
         <li>
@@ -31,15 +31,15 @@
     <input type="text" id="confirmPassword" name="confirmPassword required">
 </li>
        </ul>
-       <button type="submit">Submit</button>
-      </form>
+       <button type="button" onclick="submitForm()">Submit</button>
+    </form>
     </main>
-<script>
-    function displaySuccessMessage() {
+    <script>
+        function submitForm() {
             alert('Form submitted successfully!');
-            return true; // Allow form submission to continue
+            document.getElementById('account-form').submit(); // Submit the form
         }
-</script>
+    </script>
     <footer>
         NIC GDES 252 is the bomb.com &copy; 2023
     </footer>
