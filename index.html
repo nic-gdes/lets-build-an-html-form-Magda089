@@ -13,7 +13,7 @@
     </header>
 
     <main>
-      <for action="result.html1" method="get">
+      <for action="result.html1" method="GET" onsubmit="return displaySuccessMessage();">
         <h2 class="form-heading">Create an Account</h2>
        <ul>
         <li>
@@ -35,9 +35,10 @@
       </form>
     </main>
 <script>
-    function submitForm (){
-    alert('Form submitted successfully!');
-    }
+    function displaySuccessMessage() {
+            alert('Form submitted successfully!');
+            return true; // Allow form submission to continue
+        }
 </script>
     <footer>
         NIC GDES 252 is the bomb.com &copy; 2023
