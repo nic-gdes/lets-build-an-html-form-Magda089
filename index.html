@@ -13,35 +13,47 @@
     </header>
 
     <main>
-      <form action="result.html1" method="GET">
+      <form action="result.html1" method="get" id="account-form">
         <h2 class="form-heading">Create an Account</h2>
        <ul>
         <li>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username required">
+            <label for="username">Username (Required):</label>
+            <input type="text" id="username" name="username" required>
         </li>
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email required">
+            <label for="email">Email (Required):</label>
+            <input type="text" id="email" name="email" required>
         </li>
-            <label for="password">Password:</label>
-            <input type="text" id="password" name="password required">
+            <label for="password">Password (Required):</label>
+            <input type="text" id="password" name="password" required>
         </li>
     </li>
-    <label for="confirmPassword">Confirm Password:</label>
-    <input type="text" id="confirmPassword" name="confirmPassword required">
+    <label for="confirmPassword">Confirm Password (Required):</label>
+    <input type="text" id="confirmPassword" name="confirmPassword" required>
 </li>
        </ul>
-       <button type="button" onclick="submitForm()">Submit</button>
+       <!-- <button type="button" onclick="submitForm()">Submit</button> -->
+       <button type="button" id="submit-button">Submit</button>
     </form>
     </main>
     <script>
-        function submitForm() {
-            alert('Form submitted successfully!');
-            document.getElementById('account-form').submit(); // Submit the form
-        }
+
+// 3
+document.getElementById('submit-button').addEventListener('click', function() {
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (!username || !email || !password || !confirmPassword) {
+                alert('Oops! You left some fields empty. I believe in you, though! Fill in the blanks!');
+            } else {
+                alert('Congratulations! 🎉 You successfully created an account. Welcome to the club!');
+                document.getElementById('account-form').submit();
+            }
+        });
     </script>
     <footer>
-        NIC GDES 252 is the bomb.com &copy; 2023
+        NIC GDES 252 by Wild Design &copy; 2023
     </footer>
 </body>
 
