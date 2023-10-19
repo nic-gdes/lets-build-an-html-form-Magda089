@@ -13,32 +13,50 @@
     </header>
 
     <main>
-      <form action="result.html1" method="get" id="account-form">
-        <h2 class="form-heading">Create an Account</h2>
-       <ul>
-        <li>
-            <label for="username">Username (Required):</label>
-            <input type="text" id="username" name="username" required>
-        </li>
-            <label for="email">Email (Required):</label>
-            <input type="text" id="email" name="email" required>
-        </li>
-            <label for="password">Password (Required):</label>
-            <input type="text" id="password" name="password" required>
-        </li>
-    </li>
-    <label for="confirmPassword">Confirm Password (Required):</label>
-    <input type="text" id="confirmPassword" name="confirmPassword" required>
-</li>
-       </ul>
-       <!-- <button type="button" onclick="submitForm()">Submit</button> -->
-       <button type="button" id="submit-button">Submit</button>
-    </form>
-    </main>
-    <script>
+        <form action="results.html" method="get" id="account-form">
+            <h2 class="form-heading">Create an Account</h2>
+            <ul>
+                <li>
+                    <label for="username">Username (Required):</label>
+                    <input type="text" id="username" name="username" required>
+                </li>
+                <label for="email">Email (Required):</label>
+                <input type="text" id="email" name="email" required>
+                </li>
+                <label for="password">Password (Required):</label>
+                <input type="text" id="password" name="password" required>
+                </li>
+                </li>
+                <label for="confirmPassword">Confirm Password (Required):</label>
+                <input type="textarea" id="confirmPassword" name="confirmPassword" required>
+                </li>
+                <h2 class="form-heading">Are you agree?</h2>
+                   <input type="checkbox" id="agrement1" name="agrement1" value="yes">
+                  <label for="agreement1"> I do</label><br>
+                  <input type="checkbox" id="agreement2" name="agrement2" value="no">
+                   <label for="agreement2"> I do not</label><br>
+            </ul>
 
-// 3
-document.getElementById('submit-button').addEventListener('click', function() {
+            <h2 class="form-heading">Tell us more</h2>
+            
+                <p><label for="results">What was your experience?</label></p>
+                <textarea id="results" name="results" rows="4" cols="50">Type your answer here ;)</textarea>
+                <br>
+          
+
+            <p>Click the "Submit" button and the form-data will be sent to a page on the
+                server called "result.html".</p>
+            <button>Submit</button>
+           
+            
+            
+            <!-- <input type="submit" value="Submit" class="button"> -->
+        </form>
+    </main>
+    <!-- <script>
+
+        // 3
+        document.getElementById('submit-button').addEventListener('click', function () {
             const username = document.getElementById('username').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
@@ -51,7 +69,7 @@ document.getElementById('submit-button').addEventListener('click', function() {
                 document.getElementById('account-form').submit();
             }
         });
-    </script>
+    </script> -->
     <footer>
         NIC GDES 252 by Wild Design &copy; 2023
     </footer>
